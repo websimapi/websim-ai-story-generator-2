@@ -22,6 +22,7 @@
     textarea {
       min-height: 100px;
       padding: 0.5rem;
+      font-family: inherit;
     }
 
     button {
@@ -31,6 +32,7 @@
       padding: 0.5rem 1rem;
       border-radius: 4px;
       cursor: pointer;
+      font-size: 1rem;
     }
 
     button:hover {
@@ -43,12 +45,19 @@
       border-radius: 4px;
       white-space: pre-wrap;
     }
+
+    .note {
+      color: #666;
+      font-size: 0.9rem;
+      font-style: italic;
+      margin-top: 1rem;
+    }
   </style>
 </head>
 <body>
   <h1>AI Story Generator</h1>
   
-  <form action="generate.php" method="POST">
+  <form action="https://example.com/generate" method="POST">
     <label>
       Additional Context (optional):
       <textarea name="data" placeholder="Add any background information here..."></textarea>
@@ -59,11 +68,19 @@
     <button type="submit">Generate Story</button>
   </form>
 
-  <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
-    <div class="response">
-      <?php echo htmlspecialchars($_POST['generated_story'] ?? 'No story generated yet.'); ?>
-    </div>
-  <?php endif; ?>
+  <div class="note">
+    Note: This is a static HTML demo. In a real implementation, the form would submit to a backend service that processes the AI request.
+  </div>
+
+  <div class="response">
+    Example response:
+    
+In the vast expanse of space, our explorer found something unexpected...
+
+Captain Sarah Chen never expected to find a crystalline structure floating in the void between Mars and Jupiter. Its faceted surface reflected the distant sunlight in mesmerizing patterns, creating a light show that put Earth's auroras to shame. As she maneuvered her ship closer, her instruments began registering unusual energy signatures that defied explanation.
+
+This discovery would change everything we thought we knew about life in our solar system.
+  </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
