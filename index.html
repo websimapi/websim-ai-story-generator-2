@@ -1,101 +1,29 @@
-<html><head><base href="/" /></head><body>Given the challenges with form submissions to external endpoints, let me create a more demo-focused version that can work entirely client-side. Here's a complete, working static HTML page:
-
-```html
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Story Generator</title>
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      line-height: 1.5;
-    }
-
-    details {
-      margin-bottom: 2rem;
-    }
-
-    summary {
-      cursor: pointer;
-      background: #0066ff;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      display: inline-block;
-    }
-
-    summary:hover {
-      background: #0052cc;
-    }
-
-    textarea {
-      width: 100%;
-      min-height: 100px;
-      padding: 0.5rem;
-      font-family: inherit;
-      margin: 1rem 0;
-    }
-
-    .response {
-      padding: 1rem;
-      background: #f0f0f0;
-      border-radius: 4px;
-      white-space: pre-wrap;
-      margin-top: 1rem;
-    }
-
-    .story {
-      padding: 1rem;
-      background: #f8f8f8;
-      border-radius: 4px;
-      margin-top: 1rem;
-    }
-
-    .note {
-      color: #666;
-      font-size: 0.9rem;
-      font-style: italic;
-      margin-top: 1rem;
-    }
-  </style>
+  <title>Interactive AI Stylist</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>AI Story Generator</h1>
-  
-  <details>
-    <summary>Show Story Generator</summary>
-    <div class="story">
-      <h3>Your Space Explorer Story:</h3>
-      <p>In the vast expanse of space, our explorer found something unexpected...</p>
-      
-      <p>Captain Sarah Chen never expected to find a crystalline structure floating in the void between Mars and Jupiter. Its faceted surface reflected the distant sunlight in mesmerizing patterns, creating a light show that put Earth's auroras to shame. As she maneuvered her ship closer, her instruments began registering unusual energy signatures that defied explanation.</p>
-      
-      <p>This discovery would change everything we thought we knew about life in our solar system.</p>
-    </div>
+  <div id="playground">
+    <h1>Interactive AI Style Generator</h1>
+    <p>Click any element to generate new AI-powered styles!</p>
     
-    <div class="note">
-      Additional context (if you had provided any) would have influenced the story's details.
+    <div class="interactive-zone">
+      <div class="box" data-interactive>Box 1</div>
+      <div class="box" data-interactive>Box 2</div>
+      <div class="box" data-interactive>Box 3</div>
     </div>
-  </details>
 
-  <div class="note">
-    Note: This is a static HTML demo showing how the story generator would work. In a real implementation, this would connect to an AI service to generate unique stories.
+    <p class="instruction" data-interactive>
+      This text is clickable too! Give it a try.
+    </p>
+
+    <div class="status">Click any element to start the magic!</div>
   </div>
 
-  <div class="response">
-    How to use:
-    1. Click "Show Story Generator" to reveal a sample story
-    2. In a full implementation, you would be able to provide additional context to influence the story
-    3. The AI would generate a unique story each time based on the space explorer prompt and your context
-  </div>
+  <script type="module" src="app.js"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-```
-
-I've converted this to a pure HTML demo using the `<details>` element, which provides native HTML interactivity without any JavaScript. The story is now revealed through a simple click, and I've maintained all the content while removing the problematic form submission. This version will work reliably in any browser without any server requirements or permissions issues.</body></html>

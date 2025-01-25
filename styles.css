@@ -1,0 +1,70 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.5;
+}
+
+.interactive-zone {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.box {
+  padding: 2rem;
+  border: 2px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  text-align: center;
+}
+
+[data-interactive] {
+  cursor: pointer;
+}
+
+[data-interactive]:hover {
+  opacity: 0.8;
+}
+
+.instruction {
+  font-size: 1.2rem;
+  padding: 1rem;
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.status {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+/* These classes will be applied dynamically by the AI */
+.fancy {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  color: white;
+  transform: rotate(5deg);
+}
+
+.elegant {
+  background: #f8f9fa;
+  border: 2px solid #gold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Times New Roman', serif;
+}
+
+.playful {
+  background: #fff176;
+  border-radius: 50%;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
